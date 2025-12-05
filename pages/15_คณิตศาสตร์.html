@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คณิตศาสตร์และตรรกศาสตร์ | สรุปสอบท้องถิ่น</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'paper': '#F9F7F1', 'paper-dark': '#1a1a1a', 'ink': '#2D2D2D', 'ink-light': '#e8e8e8', 'olive': '#556B2F', 'olive-light': '#6B8E23' }, fontFamily: { 'kanit': ['Kanit', 'sans-serif'], 'sarabun': ['Sarabun', 'sans-serif'] } } } }</script>
+    <link rel="stylesheet" href="reading-style.css">
+</head>
+<body class="bg-paper dark:bg-paper-dark text-ink dark:text-ink-light font-sarabun">
+    <div id="progress-bar"></div>
+    <a href="../index.html" class="fixed top-4 left-4 z-40 p-2 bg-white dark:bg-zinc-800 rounded-full shadow-md hover:shadow-lg transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></a>
+
+    <article class="max-w-[750px] mx-auto px-6 py-16">
+        <header class="mb-12 text-center">
+            <span class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full mb-4">วิชาคณิตศาสตร์</span>
+            <h1 class="font-kanit text-3xl sm:text-4xl font-semibold mb-4">🧮 คณิตศาสตร์และตรรกศาสตร์</h1>
+            <p class="text-ink/60 dark:text-ink-light/60">สูตรลัด "เห็นปุ๊บ กาปั๊บ" พิชิตข้อสอบท้องถิ่น</p>
+            <div class="mt-6 flex items-center justify-center gap-4 text-sm text-ink/50"><span>⏱️ อ่านประมาณ 15 นาที</span></div>
+        </header>
+
+        <div class="reading-content leading-[1.9] text-[17px]">
+
+            <section id="sec-1" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">🕵️</span>
+                    1. อนุกรม (Series) - เกมจับผิดตัวเลข
+                </h2>
+                <div class="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg mb-4">
+                    💡 <strong>หัวใจคือ "หาความสัมพันธ์"</strong> ถ้ามองไม่ออกให้ตีแฉก (V-Shape)
+                </div>
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead><tr class="bg-blue-600 text-white"><th class="py-3 px-3">ประเภท</th><th class="py-3 px-3">จุดสังเกต</th><th class="py-3 px-3">สูตรลับ</th></tr></thead>
+                        <tbody>
+                            <tr class="border-b border-ink/10"><td class="py-3 px-3 font-medium">เพิ่ม/ลด ปกติ</td><td class="py-3 px-3">เลขค่อยๆ เพิ่มหรือลด</td><td class="py-3 px-3">ตีแฉกหาผลต่างชั้นที่ 1, 2, 3</td></tr>
+                            <tr class="border-b border-ink/10"><td class="py-3 px-3 font-medium">ผสม (Mix)</td><td class="py-3 px-3">เลขกระโดดไปมา</td><td class="py-3 px-3">อาจมี +−×÷ ผสมกัน (เช่น คูณ 2 แล้วบวก 1)</td></tr>
+                            <tr class="border-b border-ink/10"><td class="py-3 px-3 font-medium">อนุกรม "ชุด"</td><td class="py-3 px-3">เลขยาวเหยียด (เกิน 6-7 ตัว)</td><td class="py-3 px-3">"กระโดดข้าม" ทันที! (มองข้าม 1-2 ตัว)</td></tr>
+                            <tr class="border-b border-ink/10"><td class="py-3 px-3 font-medium">บวกสะสม</td><td class="py-3 px-3">ตัวหลัง = ผลบวกตัวหน้า</td><td class="py-3 px-3">หน้า + กลาง = หลัง (3, 4, 7, 11...)</td></tr>
+                            <tr><td class="py-3 px-3 font-medium">เศษส่วน</td><td class="py-3 px-3">มาเป็นชั้นๆ</td><td class="py-3 px-3">แยกคิด บน-บน / ล่าง-ล่าง</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ตัวอย่างโจทย์อนุกรม -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-4">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์ 1: อนุกรมเพิ่มปกติ</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> 2, 5, 10, 17, 26, <span class="text-red-500 font-bold">?</span></p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ (ตีแฉก):</p>
+                        <p class="text-sm mb-1">ผลต่างชั้น 1: 5-2=<strong>3</strong>, 10-5=<strong>5</strong>, 17-10=<strong>7</strong>, 26-17=<strong>9</strong></p>
+                        <p class="text-sm mb-1">สังเกต: 3, 5, 7, 9 → เพิ่มทีละ 2 → ตัวถัดไปคือ <strong>11</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> 26 + 11 = <span class="text-green-600 font-bold">37</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-4">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์ 2: อนุกรมผสม (×2 แล้ว +1)</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> 1, 3, 7, 15, 31, <span class="text-red-500 font-bold">?</span></p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">1×2+1=<strong>3</strong>, 3×2+1=<strong>7</strong>, 7×2+1=<strong>15</strong>, 15×2+1=<strong>31</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> 31×2+1 = <span class="text-green-600 font-bold">63</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์ 3: อนุกรมชุด (กระโดดข้าม)</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> 2, 5, 4, 10, 6, 15, <span class="text-red-500 font-bold">?</span></p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ (แยก 2 ชุด):</p>
+                        <p class="text-sm mb-1">ชุดที่ 1 (ตำแหน่งคี่): 2, 4, 6, <strong>?</strong> → เพิ่มทีละ 2 → ตอบ <strong>8</strong></p>
+                        <p class="text-sm mb-1">ชุดที่ 2 (ตำแหน่งคู่): 5, 10, 15 → เพิ่มทีละ 5</p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">8</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-2" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">➗</span>
+                    2. คณิตศาสตร์ทั่วไป (สูตรหากิน)
+                </h2>
+                
+                <h3 class="font-kanit font-medium mb-3">🧩 บัญญัติไตรยางศ์ & อัตราส่วน</h3>
+                <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400 p-4 rounded-r-lg mb-4">
+                    <p><strong>สูตรครอบจักรวาล:</strong> (ขวา ÷ ซ้าย) × สิ่งที่ถาม</p>
+                    <p class="text-sm mt-2">เทียบบัญญัติไตรยางศ์: "ถ้า A ได้ B... แล้ว C จะได้เท่าไหร่?"</p>
+                </div>
+
+                <!-- ตัวอย่างบัญญัติไตรยางศ์ -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-6">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์: บัญญัติไตรยางศ์</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> รถยนต์วิ่ง 120 กม. ใช้น้ำมัน 10 ลิตร ถ้าวิ่ง 300 กม. จะใช้น้ำมันกี่ลิตร?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">120 กม. → 10 ลิตร</p>
+                        <p class="text-sm mb-1">300 กม. → ? ลิตร</p>
+                        <p class="text-sm mb-1">สูตร: (300 ÷ 120) × 10 = 2.5 × 10 = <strong>25 ลิตร</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">25 ลิตร</span></p>
+                    </div>
+                </div>
+
+                <h3 class="font-kanit font-medium mb-3">📊 ร้อยละ & เปอร์เซ็นต์ (ออกทุกปี!)</h3>
+                <div class="space-y-3 mb-4">
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg border border-ink/10">
+                        <strong>หาค่าเปอร์เซ็นต์:</strong> A เป็นกี่ % ของ B? → (A ÷ B) × 100
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg border border-ink/10">
+                        <strong>หาผลลัพธ์:</strong> X% ของ Y คือเท่าไหร่? → (X ÷ 100) × Y
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg border border-ink/10">
+                        <strong>หาเงินต้น (ย้อนกลับ):</strong> รู้ค่าหลังลด/เพิ่ม → ค่าที่รู้ × (100 ÷ เปอร์เซ็นต์ที่เหลือ)
+                    </div>
+                </div>
+
+                <!-- ตัวอย่างร้อยละ -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-4">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์ 1: ลดราคา</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> กระเป๋าราคา 1,200 บาท ลดราคา 25% จะต้องจ่ายเท่าไหร่?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">ลด 25% = จ่าย 75% (100-25=75)</p>
+                        <p class="text-sm mb-1">1,200 × (75÷100) = 1,200 × 0.75 = <strong>900 บาท</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">900 บาท</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-6">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์ 2: หาราคาเดิม (ย้อนกลับ)</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> ซื้อเสื้อหลังลด 20% จ่ายไป 640 บาท ราคาเดิมเท่าไหร่?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">ลด 20% = จ่าย 80%</p>
+                        <p class="text-sm mb-1">640 คือ 80% ของราคาเดิม</p>
+                        <p class="text-sm mb-1">ราคาเดิม = 640 × (100÷80) = 640 × 1.25 = <strong>800 บาท</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">800 บาท</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-3" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">⚔️</span>
+                    3. ห.ร.ม. VS ค.ร.น. (คู่ปรับตลอดกาล)
+                </h2>
+                <div class="overflow-x-auto mb-4">
+                    <table class="w-full text-center border-collapse text-sm">
+                        <thead><tr class="bg-blue-600 text-white"><th class="py-3 px-3">เรื่อง</th><th class="py-3 px-3">คีย์เวิร์ดในโจทย์</th><th class="py-3 px-3">วิธีใช้</th></tr></thead>
+                        <tbody>
+                            <tr class="border-b border-ink/10"><td class="py-3 px-3 font-medium">ห.ร.ม.<br><span class="text-xs">(หารร่วมมาก)</span></td><td class="py-3 px-3 text-left">"แบ่งของ / ใส่ถุง / ขนาดเท่ากัน / ไม่ปนกัน / มากที่สุด"</td><td class="py-3 px-3 text-left">แบ่งของไม่ให้เหลือเศษ</td></tr>
+                            <tr><td class="py-3 px-3 font-medium">ค.ร.น.<br><span class="text-xs">(คูณร่วมน้อย)</span></td><td class="py-3 px-3 text-left">"เวลา / พร้อมกันอีกครั้ง / นาฬิกาปลุก / เจอกันเมื่อไหร่"</td><td class="py-3 px-3 text-left">คำนวณรอบเวลาที่จะมาบรรจบกัน</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg mb-4">
+                    💡 <strong>สูตรจำ:</strong> ห. = หั่น (แบ่งของ) 🍎 / ค. = ครบ (ครบเวลามาเจอกัน) ⏰
+                </div>
+
+                <!-- ตัวอย่าง ห.ร.ม. และ ค.ร.น. -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-4">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์ ห.ร.ม.</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> มีส้ม 24 ผล และแอปเปิ้ล 36 ผล จะแบ่งใส่ถุงให้เท่าๆ กัน โดยไม่ปนกัน ได้มากที่สุดกี่ถุง?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">คีย์เวิร์ด: "แบ่ง", "เท่าๆ กัน", "มากที่สุด" → ใช้ <strong>ห.ร.ม.</strong></p>
+                        <p class="text-sm mb-1">24 = 2×2×2×3</p>
+                        <p class="text-sm mb-1">36 = 2×2×3×3</p>
+                        <p class="text-sm mb-1">ห.ร.ม.(24,36) = 2×2×3 = <strong>12</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">12 ถุง</span> (ส้มถุงละ 2 ผล, แอปเปิ้ลถุงละ 3 ผล)</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์ ค.ร.น.</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> นาฬิกา A ดังทุก 6 นาที นาฬิกา B ดังทุก 8 นาที ถ้าดังพร้อมกันตอน 8:00 น. จะดังพร้อมกันอีกครั้งเมื่อไหร่?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">คีย์เวิร์ด: "พร้อมกันอีกครั้ง", "เมื่อไหร่" → ใช้ <strong>ค.ร.น.</strong></p>
+                        <p class="text-sm mb-1">6 = 2×3</p>
+                        <p class="text-sm mb-1">8 = 2×2×2</p>
+                        <p class="text-sm mb-1">ค.ร.น.(6,8) = 2×2×2×3 = <strong>24 นาที</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">8:24 น.</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-4" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">👴</span>
+                    4. โจทย์ปัญหา (Word Problems)
+                </h2>
+
+                <h3 class="font-kanit font-medium mb-3">👴 โจทย์อายุ</h3>
+                <ul class="space-y-2 pl-4 mb-4">
+                    <li>• <strong>หลักการ:</strong> "อดีตต้องลบ อนาคตต้องบวก"</li>
+                    <li>• <strong>ตารางวิเศษ:</strong> สร้างตาราง 3 ช่อง: อดีต | ปัจจุบัน | อนาคต</li>
+                    <li>• <strong>Tip:</strong> กำหนดอายุ "ปัจจุบัน" ของคนที่ถูกถามเป็น X</li>
+                </ul>
+
+                <!-- ตัวอย่างโจทย์อายุ -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-6">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์อายุ</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> ปัจจุบันพ่ออายุมากกว่าลูก 25 ปี อีก 5 ปีข้างหน้า พ่อจะมีอายุเป็น 2 เท่าของลูก ปัจจุบันลูกอายุเท่าไหร่?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">ให้ลูกอายุปัจจุบัน = x ปี → พ่ออายุ = x+25 ปี</p>
+                        <p class="text-sm mb-1">อีก 5 ปี: ลูก = x+5, พ่อ = x+30</p>
+                        <p class="text-sm mb-1">พ่อ = 2 เท่าของลูก: x+30 = 2(x+5)</p>
+                        <p class="text-sm mb-1">x+30 = 2x+10 → x = 20</p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> ลูกอายุ <span class="text-green-600 font-bold">20 ปี</span></p>
+                    </div>
+                </div>
+
+                <h3 class="font-kanit font-medium mb-3">👷 โจทย์การทำงาน</h3>
+                <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400 p-4 rounded-r-lg mb-4">
+                    <p><strong>2 คนช่วยกัน:</strong> เวลาที่ใช้ = (เวลาคนแรก × เวลาคนที่สอง) ÷ (เวลาคนแรก + เวลาคนที่สอง)</p>
+                    <p class="text-sm mt-2">จำง่าย: <strong>คูณกัน หารด้วย บวกกัน</strong></p>
+                </div>
+
+                <!-- ตัวอย่างโจทย์การทำงาน -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl mb-6">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์การทำงาน</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> A ทำงานคนเดียวเสร็จใน 6 ชม. B ทำงานคนเดียวเสร็จใน 3 ชม. ถ้าช่วยกันทำจะเสร็จในกี่ชั่วโมง?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">สูตร: (คูณกัน) ÷ (บวกกัน)</p>
+                        <p class="text-sm mb-1">= (6 × 3) ÷ (6 + 3)</p>
+                        <p class="text-sm mb-1">= 18 ÷ 9 = <strong>2 ชั่วโมง</strong></p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">2 ชั่วโมง</span></p>
+                    </div>
+                </div>
+
+                <h3 class="font-kanit font-medium mb-3">🏎️ การเดินทาง</h3>
+                <ul class="space-y-2 pl-4 mb-4">
+                    <li>• <strong>สูตรพื้นฐาน:</strong> v = s ÷ t (ความเร็ว = ระยะทาง ÷ เวลา)</li>
+                    <li>• <strong>ความเร็วเฉลี่ย:</strong> ระยะทางทั้งหมด ÷ เวลาทั้งหมด</li>
+                    <li class="text-red-600">⚠️ <strong>ห้าม</strong>เอาความเร็วมาบวกกันหาร 2!</li>
+                </ul>
+
+                <!-- ตัวอย่างโจทย์การเดินทาง -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์การเดินทาง</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> รถวิ่งไป 60 กม. ด้วยความเร็ว 30 กม./ชม. แล้ววิ่งกลับ 60 กม. ด้วยความเร็ว 60 กม./ชม. ความเร็วเฉลี่ยเท่าไหร่?</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1">ระยะทางรวม = 60+60 = 120 กม.</p>
+                        <p class="text-sm mb-1">เวลาไป = 60÷30 = 2 ชม.</p>
+                        <p class="text-sm mb-1">เวลากลับ = 60÷60 = 1 ชม.</p>
+                        <p class="text-sm mb-1">เวลารวม = 3 ชม.</p>
+                        <p class="text-sm mb-1">ความเร็วเฉลี่ย = 120÷3 = <strong>40 กม./ชม.</strong></p>
+                        <p class="text-sm text-red-500">❌ ห้ามตอบ 45! (30+60)÷2 ผิด!</p>
+                        <p class="text-sm"><strong>คำตอบ:</strong> <span class="text-green-600 font-bold">40 กม./ชม.</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-5" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">📐</span>
+                    5. เรขาคณิต (Geometry)
+                </h2>
+                
+                <h3 class="font-kanit font-medium mb-3">พื้นที่ (2D)</h3>
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">วงกลม</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">πr² (รอบวง 2πr)</div>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">สามเหลี่ยม</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">½ × ฐาน × สูง</div>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">สี่เหลี่ยมจัตุรัส</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">ด้าน × ด้าน</div>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">สี่เหลี่ยมผืนผ้า</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">กว้าง × ยาว</div>
+                    </div>
+                </div>
+
+                <h3 class="font-kanit font-medium mb-3">ปริมาตร (3D)</h3>
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">ทรงกระบอก</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">πr²h</div>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">กรวย</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">⅓πr²h</div>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">ทรงกลม</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">⁴⁄₃πr³</div>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg text-center border border-ink/10">
+                        <div class="font-medium">พีระมิด</div>
+                        <div class="text-sm text-ink/60 dark:text-ink-light/70">⅓ × พื้นที่ฐาน × สูง</div>
+                    </div>
+                </div>
+                <div class="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg">
+                    💡 <strong>Trick พีทาโกรัส:</strong> ท่องเลย 3-4-5, 5-12-13, 7-24-25 (เจอบ่อยมาก!)
+                </div>
+            </section>
+
+            <section id="sec-6" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">📊</span>
+                    6. สถิติเบื้องต้น (Statistics)
+                </h2>
+                <div class="overflow-x-auto mb-4">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead><tr class="bg-blue-600 text-white"><th class="py-3 px-3">ค่ากลาง</th><th class="py-3 px-3">วิธีหา</th><th class="py-3 px-3">จุดระวัง ⚠️</th></tr></thead>
+                        <tbody>
+                            <tr class="border-b border-ink/10"><td class="py-3 px-3 font-medium">มัธยฐาน<br><span class="text-xs">(ค่าตรงกลาง)</span></td><td class="py-3 px-3">เรียงเลขจาก น้อย → มาก แล้วจิ้มตัวตรงกลาง</td><td class="py-3 px-3">ถ้ามี 2 ตัวตรงกลาง ให้บวกกันหาร 2</td></tr>
+                            <tr class="border-b border-ink/10"><td class="py-3 px-3 font-medium">ฐานนิยม<br><span class="text-xs">(ฮิตสุด)</span></td><td class="py-3 px-3">ตัวที่ซ้ำกันเยอะที่สุด</td><td class="py-3 px-3">ถ้าซ้ำเท่ากันหมด = ไม่มีฐานนิยม</td></tr>
+                            <tr><td class="py-3 px-3 font-medium">พิสัย<br><span class="text-xs">(ความห่าง)</span></td><td class="py-3 px-3">มากสุด - น้อยสุด (Max - Min)</td><td class="py-3 px-3">ง่ายสุดในโลก ห้ามคิดผิด!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ตัวอย่างสถิติ -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl">
+                    <h4 class="font-kanit font-medium text-blue-700 dark:text-blue-300 mb-3">📝 ตัวอย่างโจทย์สถิติ</h4>
+                    <p class="mb-2"><strong>โจทย์:</strong> คะแนนสอบ 6 คน: 75, 82, 68, 82, 90, 75 จงหา มัธยฐาน, ฐานนิยม, พิสัย</p>
+                    <div class="bg-white dark:bg-zinc-800 p-3 rounded-lg mt-3">
+                        <p class="font-medium text-green-600 mb-2">✅ วิธีทำ:</p>
+                        <p class="text-sm mb-1"><strong>1. เรียงก่อน:</strong> 68, 75, 75, 82, 82, 90</p>
+                        <p class="text-sm mb-1"><strong>2. มัธยฐาน:</strong> มี 6 ตัว → เอาตัวที่ 3 และ 4 มาเฉลี่ย = (75+82)÷2 = <span class="text-green-600 font-bold">78.5</span></p>
+                        <p class="text-sm mb-1"><strong>3. ฐานนิยม:</strong> 75 ซ้ำ 2 ครั้ง, 82 ซ้ำ 2 ครั้ง → มี 2 ฐานนิยม = <span class="text-green-600 font-bold">75 และ 82</span></p>
+                        <p class="text-sm"><strong>4. พิสัย:</strong> 90 - 68 = <span class="text-green-600 font-bold">22</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-7" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">📈</span>
+                    7. ตาราง/กราฟ & สมการ (Data Analysis)
+                </h2>
+
+                <h3 class="font-kanit font-medium mb-3">📊 ตาราง/กราฟ (Data Analysis)</h3>
+                <ul class="space-y-2 pl-4 mb-6">
+                    <li>• <strong>เทคนิค:</strong> อย่าคิดเลขเป๊ะ! ให้ "ปัดเศษ" เป็นเลขกลมๆ แล้วกะประมาณ (เช่น 19,850 → 20,000)</li>
+                    <li class="text-red-600">⚠️ <strong>ระวังหน่วย:</strong> อ่านหัวตารางดีๆ ว่าเป็น "บาท" หรือ "ล้านบาท" (โดนหลอกกันประจำ)</li>
+                </ul>
+
+                <h3 class="font-kanit font-medium mb-3">⚖️ สมการ 2 ตัวแปร (Equation)</h3>
+                <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400 p-4 rounded-r-lg mb-4">
+                    <p><strong>ถ้าเจอโจทย์แนว:</strong> x + y = 10 และ x - y = 4</p>
+                    <p class="mt-2">• อยากรู้ตัวมาก (x): เอาผลลัพธ์ <strong>บวกกันหาร 2</strong> → (10+4)/2 = 7</p>
+                    <p class="mt-1">• อยากรู้ตัวน้อย (y): เอาผลลัพธ์ <strong>ลบกันหาร 2</strong> → (10-4)/2 = 3</p>
+                    <p class="text-sm mt-2 text-ink/60 dark:text-ink-light/70">ไม่ต้องแก้สมการยาวๆ ใช้สูตรนี้เลย!</p>
+                </div>
+            </section>
+
+            <section id="sec-8" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">🔣</span>
+                    8. เงื่อนไขสัญลักษณ์ (Symbol Conditions)
+                </h2>
+                <div class="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 rounded-r-lg mb-4">
+                    💡 <strong>เทคนิค:</strong> หา "ตัวเชื่อม" (ตัวแปรที่ซ้ำกัน 2 บรรทัด) แล้วจับมาชนกัน
+                </div>
+                <ul class="space-y-2 pl-4 mb-4">
+                    <li>• <strong>เครื่องหมายสวนทาง:</strong> เช่น A > B < C → ตอบ <strong>ไม่แน่ชัด</strong> ทันที (อย่าฝืนเทียบ)</li>
+                    <li>• <strong>เครื่องหมายไปทางเดียว:</strong> เช่น A > B > C → สรุปได้ว่า A > C</li>
+                </ul>
+                <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                    <p><strong>ตัวอย่าง:</strong> ถ้า A = B และ B > C</p>
+                    <p class="mt-1">✅ สรุปได้: A > C (เพราะ A = B และ B > C)</p>
+                </div>
+            </section>
+
+            <section id="sec-9" class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-sm">🧩</span>
+                    9. ตรรกศาสตร์ (Logic)
+                </h2>
+
+                <h3 class="font-kanit font-medium mb-3">A. ตรรกะรูปภาพ (Venn Diagram)</h3>
+                <ul class="space-y-2 pl-4 mb-6">
+                    <li>• <strong>ทั้งหมด (All):</strong> "ข้าราชการทุกคนหน้าตาดี" → วงข้าราชการ อยู่ใน วงคนหน้าตาดี</li>
+                    <li>• <strong>บางคน (Some):</strong> "มือถือบางเครื่องสีแดง" → วงมือถือ เกี่ยวกับ วงสีแดง</li>
+                    <li>• <strong>ไม่มีเลย (None):</strong> "หมาไม่ใช่แมว" → วงแยกกัน ไม่แตะกัน</li>
+                </ul>
+
+                <h3 class="font-kanit font-medium mb-3">B. ตรรกะเหตุผล (If... Then...)</h3>
+                <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400 p-4 rounded-r-lg mb-4">
+                    <p><strong>สูตร:</strong> ถ้า A แล้ว B (A → B)</p>
+                    <p class="mt-2">✅ <strong>จริงเสมอ:</strong> "ปฏิเสธหลัง → ปฏิเสธหน้า" (ไม่ B → ไม่ A)</p>
+                    <p class="mt-2">❌ <strong>สรุปไม่ได้:</strong> ขึ้นต้นด้วยหลัง (B → A?) หรือ ปฏิเสธหน้า (ไม่ A → ไม่ B?)</p>
+                </div>
+                <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                    <p><strong>ตัวอย่าง:</strong> "ถ้าฝนตก(A) ถนนจะเปียก(B)"</p>
+                    <p class="mt-1">✅ ถนนไม่เปียก → ฝนไม่ตก (ชัวร์!)</p>
+                    <p class="mt-1">❌ ถนนเปียก → ฝนตก? (ไม่แน่... รถน้ำอาจจะราด)</p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="font-kanit text-xl font-medium text-red-600 dark:text-red-400 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center text-sm">🐃</span>
+                    จุดดักควาย (ข้อสอบชอบหลอก!)
+                </h2>
+                <div class="space-y-3">
+                    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+                        <h4 class="font-kanit font-medium mb-2">1. อนุกรมเศษส่วน</h4>
+                        <p class="text-sm">อย่าเพิ่งรีบตัดเลข! บางทีมันเพิ่มแบบคูณ 2 ทั้งบนและล่าง การตัดเลขอาจทำให้มองแพทเทิร์นไม่ออก</p>
+                    </div>
+                    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+                        <h4 class="font-kanit font-medium mb-2">2. ร้อยละ (ลดราคา vs กำไร)</h4>
+                        <p class="text-sm">ลด 10% = ขาย <strong>90%</strong> / กำไร 10% = ขาย <strong>110%</strong> (อย่าเอา % ไปคูณเลย!)</p>
+                    </div>
+                    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+                        <h4 class="font-kanit font-medium mb-2">3. ห.ร.ม. เศษเหลือ</h4>
+                        <p class="text-sm">ถ้าโจทย์บอก "แบ่งแล้วเหลือเศษเท่ากัน" → เอาเศษไป <strong>ลบ</strong> ออกจากตัวเลขก่อน แล้วค่อยหา ห.ร.ม.</p>
+                    </div>
+                    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+                        <h4 class="font-kanit font-medium mb-2">4. ค.ร.น. เศษเหลือ</h4>
+                        <p class="text-sm">หา ค.ร.น. ก่อน แล้วค่อยเอาเศษมา <strong>บวก</strong> ทีหลัง (ตรงข้ามกับ ห.ร.ม.)</p>
+                    </div>
+                    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+                        <h4 class="font-kanit font-medium mb-2">5. มัธยฐานลืมเรียง</h4>
+                        <p class="text-sm">ได้เลขมาปุ๊บ ต้อง <strong>เรียงจากน้อยไปมากก่อน</strong> เสมอ! (โจทย์ชอบหลอกให้เลขสะเปะสะปะมา)</p>
+                    </div>
+                    <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+                        <h4 class="font-kanit font-medium mb-2">6. หน่วยเวลา</h4>
+                        <p class="text-sm">โจทย์ให้ "นาที" แต่ถามเป็น "ชั่วโมง" → ต้องแปลงหน่วยก่อนคำนวณเสมอ!</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </article>
+
+    <nav class="max-w-[750px] mx-auto px-6 pb-16">
+        <div class="flex items-center justify-between pt-8 border-t border-ink/10">
+            <a href="14_ความรู้ทั่วไป.html" class="flex items-center gap-2 text-olive font-medium hover:underline"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg><span>ความรู้ทั่วไป</span></a>
+            <a href="16_ภาษาไทย.html" class="flex items-center gap-2 text-olive font-medium hover:underline"><span>ภาษาไทย</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+    </nav>
+
+    <button onclick="openSettings()" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition flex items-center justify-center"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></button>
+    <div id="settings-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4"><div class="bg-white dark:bg-zinc-800 rounded-2xl p-6 w-full max-w-sm shadow-xl"><div class="flex items-center justify-between mb-6"><h3 class="font-kanit text-lg font-medium">ตั้งค่าการอ่าน</h3><button onclick="closeSettings()" class="p-1"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button></div><div class="flex items-center justify-between py-3 border-b border-ink/10"><span>🌙 โหมดกลางคืน</span><button onclick="toggleDarkMode()" class="w-12 h-7 bg-ink/20 dark:bg-blue-600 rounded-full relative"><div class="w-5 h-5 bg-white rounded-full absolute top-1 left-1 dark:left-6 shadow"></div></button></div><div class="py-3"><span class="block mb-3">📏 ขนาดตัวอักษร</span><div class="flex gap-2"><button onclick="setFontSize('sm')" class="flex-1 py-2 px-3 rounded-lg border border-ink/10 text-sm">A-</button><button onclick="setFontSize('base')" class="flex-1 py-2 px-3 rounded-lg border border-ink/10">A</button><button onclick="setFontSize('lg')" class="flex-1 py-2 px-3 rounded-lg border border-ink/10 text-lg">A+</button></div></div></div></div>
+
+    <!-- Section Navigator -->
+    <nav class="section-nav" id="sectionNav">
+        <button class="section-nav-toggle" onclick="toggleNav()" aria-label="เปิดเมนูนำทาง">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+        <div class="section-nav-menu">
+            <a href="#sec-1" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">🕵️</span>
+                <span class="nav-text">1. อนุกรม</span>
+            </a>
+            <a href="#sec-2" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">➗</span>
+                <span class="nav-text">2. คณิตศาสตร์ทั่วไป</span>
+            </a>
+            <a href="#sec-3" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">⚔️</span>
+                <span class="nav-text">3. ห.ร.ม. VS ค.ร.น.</span>
+            </a>
+            <a href="#sec-4" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">👴</span>
+                <span class="nav-text">4. โจทย์ปัญหา</span>
+            </a>
+            <a href="#sec-5" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">📐</span>
+                <span class="nav-text">5. เรขาคณิต</span>
+            </a>
+            <a href="#sec-6" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">6. สถิติเบื้องต้น</span>
+            </a>
+            <a href="#sec-7" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">📈</span>
+                <span class="nav-text">7. ตาราง/กราฟ & สมการ</span>
+            </a>
+            <a href="#sec-8" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">🔣</span>
+                <span class="nav-text">8. เงื่อนไขสัญลักษณ์</span>
+            </a>
+            <a href="#sec-9" class="section-nav-item" onclick="closeNav()">
+                <span class="nav-icon">🧩</span>
+                <span class="nav-text">9. ตรรกศาสตร์</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // Section Navigator
+        function toggleNav() {
+            document.getElementById('sectionNav').classList.toggle('open');
+        }
+        function closeNav() {
+            document.getElementById('sectionNav').classList.remove('open');
+        }
+        document.addEventListener('click', (e) => {
+            const nav = document.getElementById('sectionNav');
+            if (!nav.contains(e.target)) {
+                nav.classList.remove('open');
+            }
+        });
+    </script>
+    <script>window.addEventListener('scroll',()=>{const t=window.scrollY,e=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progress-bar').style.width=t/e*100+'%'});function toggleDarkMode(){document.documentElement.classList.toggle('dark');localStorage.setItem('darkMode',document.documentElement.classList.contains('dark'))}localStorage.getItem('darkMode')==='true'&&document.documentElement.classList.add('dark');function openSettings(){document.getElementById('settings-modal').classList.remove('hidden');document.getElementById('settings-modal').classList.add('flex')}function closeSettings(){document.getElementById('settings-modal').classList.add('hidden');document.getElementById('settings-modal').classList.remove('flex')}function setFontSize(e){const t=document.querySelector('.reading-content');e==='sm'?t.style.fontSize='15px':e==='base'?t.style.fontSize='17px':e==='lg'&&(t.style.fontSize='19px');localStorage.setItem('fontSize',e)}const savedFontSize=localStorage.getItem('fontSize');savedFontSize&&setFontSize(savedFontSize);document.getElementById('settings-modal').addEventListener('click',e=>{e.target.id==='settings-modal'&&closeSettings()})</script>
+</body>
+</html>

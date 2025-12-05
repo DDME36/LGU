@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สรุปเตรียมสอบท้องถิ่น 2568 | มศว</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'paper': '#F9F7F1',
+                        'paper-dark': '#1a1a1a',
+                        'ink': '#2D2D2D',
+                        'ink-light': '#e8e8e8',
+                        'olive': '#556B2F',
+                        'olive-light': '#6B8E23',
+                    },
+                    fontFamily: {
+                        'kanit': ['Kanit', 'sans-serif'],
+                        'sarabun': ['Sarabun', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #556B2F;
+            width: 0%;
+            z-index: 9999;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #556B2F;
+            border-radius: 4px;
+        }
+
+        .book-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .subject-badge {
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body class="bg-paper dark:bg-paper-dark text-ink dark:text-ink-light font-sarabun min-h-screen">
+    <div id="progress-bar"></div>
+
+    <header class="sticky top-0 z-50 bg-paper/95 dark:bg-paper-dark/95 backdrop-blur-sm border-b border-ink/5">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div>
+                <h1 class="font-kanit text-xl font-semibold text-olive dark:text-olive-light">📚 สรุปสอบท้องถิ่น 2568
+                </h1>
+                <p class="text-sm text-ink/60 dark:text-ink-light/60">ข้อสอบโดย มศว • เน้นวิเคราะห์ 70-80%</p>
+            </div>
+            <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-ink/5 dark:hover:bg-ink-light/10">
+                <span class="text-xl" id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Score Overview -->
+        <div class="bg-white dark:bg-zinc-800 rounded-2xl p-6 mb-8 border border-ink/5">
+            <h2 class="font-kanit text-lg font-medium mb-4 text-center">📊 โครงสร้างข้อสอบ (100 คะแนน)</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div class="text-center p-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                    <div class="text-2xl font-kanit font-bold text-blue-600">30</div>
+                    <div class="text-xs text-ink/60 dark:text-ink-light/70">คณิตศาสตร์ฯ</div>
+                </div>
+                <div class="text-center p-3 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                    <div class="text-2xl font-kanit font-bold text-purple-600">20</div>
+                    <div class="text-xs text-ink/60 dark:text-ink-light/70">ภาษาไทย</div>
+                </div>
+                <div class="text-center p-3 bg-pink-50 dark:bg-pink-900/20 rounded-xl">
+                    <div class="text-2xl font-kanit font-bold text-pink-600">20</div>
+                    <div class="text-xs text-ink/60 dark:text-ink-light/70">ภาษาอังกฤษ</div>
+                </div>
+                <div class="text-center p-3 bg-olive/10 dark:bg-olive-light/20 rounded-xl">
+                    <div class="text-2xl font-kanit font-bold text-olive">30</div>
+                    <div class="text-xs text-ink/60 dark:text-ink-light/70">วิชากฎหมาย</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1: คณิตศาสตร์ -->
+        <section class="mb-10">
+            <h2 class="font-kanit text-lg font-medium text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+                <span>🔢</span> วิชาคณิตศาสตร์และความรู้รอบตัว (30 คะแนน) <span
+                    class="subject-badge bg-green-100 text-green-700">✅ พร้อมแล้ว</span>
+            </h2>
+            <div class="space-y-3">
+                <a href="pages/15_คณิตศาสตร์.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 font-kanit font-semibold">
+                            1</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🧮 คณิตศาสตร์และตรรกศาสตร์</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">อนุกรม • ร้อยละ • ห.ร.ม./ค.ร.น. •
+                                เรขาคณิต • สถิติ • ตรรกศาสตร์</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: ภาษาไทย -->
+        <section class="mb-10">
+            <h2
+                class="font-kanit text-lg font-medium text-purple-600 dark:text-purple-400 mb-4 flex items-center gap-2">
+                <span>📝</span> วิชาภาษาไทย (20 คะแนน) <span class="subject-badge bg-green-100 text-green-700">✅
+                    พร้อมแล้ว</span>
+            </h2>
+            <div class="space-y-3">
+                <a href="pages/16_ภาษาไทย.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 font-kanit font-semibold">
+                            2</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">📝 ภาษาไทยฉบับ "ราชการ"</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">การอ่านตัวเลข • คำราชาศัพท์ •
+                                คำมักเขียนผิด • คำไวพจน์ • สำนวน</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 3: ภาษาอังกฤษ -->
+        <section class="mb-10">
+            <h2 class="font-kanit text-lg font-medium text-pink-600 dark:text-pink-400 mb-4 flex items-center gap-2">
+                <span>🌍</span> วิชาภาษาอังกฤษ (20 คะแนน) <span class="subject-badge bg-green-100 text-green-700">✅
+                    พร้อมแล้ว</span>
+            </h2>
+            <div class="space-y-3">
+                <a href="pages/17_ภาษาอังกฤษ.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center text-pink-600 font-kanit font-semibold">
+                            3</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">📚 English พิชิตท้องถิ่น</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">Grammar • Tense 12 • If-Clause •
+                                Passive Voice • Vocabulary • Conversation</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 4: วิชากฎหมาย -->
+        <section class="mb-10">
+            <h2 class="font-kanit text-lg font-medium text-olive dark:text-olive-light mb-4 flex items-center gap-2">
+                <span>⚖️</span> วิชากฎหมาย (30 คะแนน) <span class="subject-badge bg-green-100 text-green-700">✅
+                    พร้อมแล้ว</span>
+            </h2>
+            <div class="space-y-3">
+                <a href="pages/01_รัฐธรรมนูญ.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            4</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">📜 รัฐธรรมนูญ 2560</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">กฎหมายสูงสุด • หมวด 14 ท้องถิ่น •
+                                การแก้ไข รธน.</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/02_พรบ_ระเบียบบริหาร.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            5</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🏛️ พ.ร.บ.ระเบียบบริหารราชการแผ่นดิน 2534</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">โครงสร้าง 3 ส่วน • มอบอำนาจ vs
+                                รักษาราชการแทน</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/03_พรฎ_บ้านเมืองที่ดี.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            6</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">✨ พ.ร.ฎ.บริหารกิจการบ้านเมืองที่ดี 2546</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">เป้าหมาย 7 ข้อ • ลดขั้นตอน •
+                                ศูนย์บริการร่วม</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/04_พรบ_อบจ.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            7</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🦁 พ.ร.บ.องค์การบริหารส่วนจังหวัด 2540</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">สภา อบจ. • นายก อบจ. • ข้อบัญญัติ</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/05_พรบ_อบต.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            8</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🌾 พ.ร.บ.สภาตำบลและ อบต. 2537</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">สภา อบต. • นายก อบต. • การยกฐานะ</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/06_พรบ_เทศบาล.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            9</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🏘️ พ.ร.บ.เทศบาล 2496</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">3 ระดับ (ตำบล/เมือง/นคร) • เทศบัญญัติ
+                            </p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/07_พรบ_เมืองพัทยา.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            10</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🏖️ พ.ร.บ.ระเบียบบริหารราชการเมืองพัทยา 2542</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">ท้องถิ่นรูปแบบพิเศษ • สภา 24 คน</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/08_พรบ_กระจายอำนาจ.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            11</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🌍 พ.ร.บ.กำหนดแผนและขั้นตอนการกระจายอำนาจ 2542</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">ก.ก.ถ. • การจัดสรรภาษี •
+                                รายได้ท้องถิ่น</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/09_พรบ_บุคคลท้องถิ่น.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            12</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">👥 พ.ร.บ.ระเบียบบริหารงานบุคคลส่วนท้องถิ่น 2542</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">ก.ถ. • ก.จ.จ. • ก.ท.จ. • ก.อบต.จังหวัด
+                            </p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/10_ระเบียบสารบรรณ.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            13</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">📝 ระเบียบงานสารบรรณ 2526</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">หนังสือราชการ 6 ชนิด • ขนาดครุฑ •
+                                การเก็บ/ทำลาย</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/11_พรบ_วิธีปฏิบัติราชการ.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            14</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">⚖️ พ.ร.บ.วิธีปฏิบัติราชการทางปกครอง 2539</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">คำสั่งทางปกครอง • การอุทธรณ์ • ระยะเวลา</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/12_จริยธรรม.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-olive/10 dark:bg-olive-light/20 rounded-lg flex items-center justify-center text-olive font-kanit font-semibold">
+                            15</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">😇 ประมวลจริยธรรมข้าราชการท้องถิ่น</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">จริยธรรมหลัก 7 ข้อ • เจตคติ • ค่านิยม</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 5: ความรู้ทั่วไป -->
+        <section class="mb-10">
+            <h2 class="font-kanit text-lg font-medium text-amber-600 dark:text-amber-400 mb-4 flex items-center gap-2">
+                <span>📖</span> หมวดความรู้ทั่วไป <span class="subject-badge bg-green-100 text-green-700">✅ พร้อมแล้ว</span>
+            </h2>
+            <div class="space-y-3">
+                <a href="pages/13_ประวัติศาสตร์.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center text-amber-600 font-kanit font-semibold">
+                            16</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🏛️ ประวัติศาสตร์ไทยและหน้าที่พลเมือง</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">ยุคสมัย • อาณาจักร • การปฏิรูป • 2475 • 14 ตุลา</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+
+                <a href="pages/14_ความรู้ทั่วไป.html"
+                    class="book-card block bg-white dark:bg-zinc-800 rounded-xl p-4 border border-ink/5">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center text-amber-600 font-kanit font-semibold">
+                            17</div>
+                        <div class="flex-1">
+                            <h3 class="font-kanit font-medium">🌐 ความรู้ทั่วไป</h3>
+                            <p class="text-sm text-ink/50 dark:text-ink-light/60">ยุทธศาสตร์ชาติ 20 ปี • แผนฯ 13 • เศรษฐกิจพอเพียง • โครงสร้างมหาดไทย</p>
+                        </div>
+                        <span class="text-ink/30">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <section class="mb-10">
+            <div
+                class="bg-gradient-to-r from-olive/10 to-olive-light/10 dark:from-olive/20 dark:to-olive-light/20 rounded-2xl p-6">
+                <h2 class="font-kanit text-lg font-medium mb-4 flex items-center gap-2">💡 เทคนิคสอบ มศว</h2>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex gap-2"><span>🎯</span> <span><strong>เน้นวิเคราะห์ 70-80%</strong> - ไม่ใช่แค่ท่องจำ
+                            ต้องเข้าใจหลักการ</span></li>
+                    <li class="flex gap-2"><span>⚠️</span> <span><strong>ระวังตัวเลือกหลอก</strong> -
+                            มักสลับคำ/ตัวเลขให้คล้ายกัน</span></li>
+                    <li class="flex gap-2"><span>📊</span> <span><strong>ตารางเปรียบเทียบ</strong> -
+                            ช่วยจำความแตกต่างได้ดี</span></li>
+                    <li class="flex gap-2"><span>🔢</span> <span><strong>ตัวเลขสำคัญ</strong> - จำนวนคน, วัน, ปี
+                            ต้องแม่น</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="text-center text-sm text-ink/40 dark:text-ink-light/40 py-8 border-t border-ink/5">
+            <p>สรุปโดย AI • ตรวจสอบความถูกต้องก่อนใช้งาน</p>
+            <p class="mt-1">อัปเดตล่าสุด: ธันวาคม 2567</p>
+        </footer>
+    </main>
+
+    <script>
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+            // Save scroll position
+            sessionStorage.setItem('indexScrollPos', window.scrollY);
+        });
+
+        // Restore scroll position when coming back
+        window.addEventListener('load', () => {
+            const savedPos = sessionStorage.getItem('indexScrollPos');
+            if (savedPos) {
+                window.scrollTo(0, parseInt(savedPos));
+            }
+        });
+
+        // Dark mode
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+            document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙';
+        }
+
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').textContent = '☀️';
+        }
+    </script>
+</body>
+
+</html>
